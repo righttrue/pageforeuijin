@@ -26,19 +26,30 @@ a {
 /* header */
 .main-nav {
   display: flex;
-  font-size: 1.25rem;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 18px;
+  font-size: clamp(0.9rem, 1.4vw, 1.05rem);
   text-transform: uppercase;
-  margin-top: 34px;
   list-style: none;
 }
 .main-nav li {
-  margin-left: 36px;
+  margin-left: 0;
 }
 .main-nav a {
-  color: #432;
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 0 12px;
+  border-radius: 999px;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 .main-nav a:hover {
-  color: #0bd;
+  background: rgba(255, 255, 255, 0.12);
+  color: #d9b26b;
 }
 .page-header {
   display: flex;
@@ -46,15 +57,25 @@ a {
 }
 header {
   display: flex;
+  align-items: center;
+  gap: 24px;
   background-color: black;
-  justify-content: flex-start;
+  justify-content: space-between;
+  padding: 16px 6%;
+  min-height: 74px;
 }
 header h1 {
-  padding: 0 4% 0 8%;
+  padding: 0;
   color: white;
+  font-size: clamp(24px, 3vw, 36px);
+  line-height: 1.1;
+  white-space: nowrap;
 }
 header h1:hover {
   color: #0df;
+}
+header h1 a {
+  color: inherit;
 }
 /*코드 출처 - https://shoppingkinglouis4.tistory.com/15*/
 a {
@@ -75,6 +96,7 @@ body {
 }
 
 .mobile_btn {
+  display: none;
   position: absolute;
   top: 34px;
   left: 34px;
@@ -212,13 +234,13 @@ input[id="hamburger"]:checked + label + div {
   justify-content: space-between;
 }
 .main-nav li {
-  margin-left: 36px;
+  margin-left: 0;
 }
 .main-nav a {
   color: #fff;
 }
 .main-nav a:hover {
-  color: #0bd;
+  color: #d9b26b;
 }
 /* section1*/
 #section1_detail {
@@ -230,12 +252,13 @@ input[id="hamburger"]:checked + label + div {
 }
 .title {
   font-size: clamp(72px, 14vw, 188px);
-  line-height: 0.9;
+  line-height: 0.95;
   letter-spacing: 0;
+  overflow-wrap: anywhere;
 }
 .sub-title {
   font-size: clamp(28px, 4vw, 52px);
-  line-height: 1;
+  line-height: 1.12;
 }
 .hero-copy {
   max-width: 720px;
@@ -371,7 +394,7 @@ input[id="hamburger"]:checked + label + div {
 .title-2 {
   font-size: clamp(42px, 6vw, 72px);
   padding-left: 0;
-  line-height: 1;
+  line-height: 1.12;
 }
 #container-section3 {
   display: grid;
@@ -415,9 +438,13 @@ input[id="hamburger"]:checked + label + div {
 }
 
 #section3-text-2 {
-  font-size: clamp(34px, 5vw, 70px);
+  font-size: clamp(30px, 4vw, 58px);
   background-color: #1f3433;
   align-items: flex-start;
+}
+#section3-text-2 h2 {
+  line-height: 1.08;
+  overflow-wrap: anywhere;
 }
 #section3-text-2 p {
   font-size: 18px;
@@ -500,7 +527,7 @@ iframe {
 .contact-box-right-title {
   font-size: clamp(42px, 5vw, 64px);
   margin-bottom: 26px;
-  line-height: 1;
+  line-height: 1.1;
 }
 form div {
   margin-bottom: 14px;
@@ -661,9 +688,10 @@ footer p {
 }
 .project-hero h1,
 .project-detail-hero h1 {
-  font-size: clamp(46px, 7vw, 86px);
-  line-height: 0.96;
+  font-size: clamp(42px, 6vw, 74px);
+  line-height: 1.06;
   letter-spacing: 0;
+  overflow-wrap: anywhere;
 }
 .project-hero p,
 .project-detail-hero p {
@@ -744,7 +772,8 @@ footer p {
 }
 .project-row-title h2 {
   font-size: clamp(28px, 3vw, 42px);
-  line-height: 1.05;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
 }
 .project-status {
   width: fit-content;
@@ -967,10 +996,6 @@ footer p {
     padding: 110px 24px 54px;
     align-items: flex-end;
   }
-  .mobile_btn {
-    top: 24px;
-    left: 22px;
-  }
   #section1_detail {
     width: 100%;
     display: grid;
@@ -983,10 +1008,12 @@ footer p {
     width: 96px;
   }
   .title {
-    font-size: 64px;
+    font-size: clamp(52px, 16vw, 64px);
+    line-height: 1;
   }
   .sub-title {
     font-size: 30px;
+    line-height: 1.16;
   }
   .hero-summary {
     max-width: none;
@@ -1061,32 +1088,42 @@ footer p {
     height: 320px;
   }
   .main-nav {
-    display: grid;
-    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 13px;
     text-transform: uppercase;
     list-style: none;
     color: #fff;
     font-weight: bold;
   }
   .main-nav li {
-    margin-left: 36px;
+    margin-left: 0;
   }
   .main-nav a {
-    color: #432;
+    min-height: 32px;
+    padding: 0 10px;
+    color: #fff;
   }
   .main-nav a:hover {
-    color: #0bd;
+    color: #d9b26b;
   }
   .page-header {
     display: flex;
     justify-content: space-around;
   }
   header {
-    display: grid;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
     background-color: black;
-    justify-content: flex-start;
-    padding-bottom: 3%;
-    margin-bottom: 3%;
+    justify-content: space-between;
+    padding: 14px 18px;
+    margin-bottom: 0;
+  }
+  header h1 {
+    font-size: 24px;
+    line-height: 1.1;
   }
 
   #img-dis {
@@ -1125,7 +1162,8 @@ footer p {
   }
   .project-hero h1,
   .project-detail-hero h1 {
-    font-size: 42px;
+    font-size: clamp(34px, 10vw, 42px);
+    line-height: 1.1;
   }
   .project-hero p,
   .project-detail-hero p {
