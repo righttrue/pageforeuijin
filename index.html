@@ -6,7 +6,7 @@
     <!--<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="practice.js"></script>-->
 
-    <title>Document</title>
+    <title>Portfolio | Lee Eui Jin</title>
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Philosopher"
@@ -26,7 +26,7 @@
         </label>
         <div class="sidebar">
           <h2 style="text-align: center; position: relative; top: 75px">
-            <a href="index.html">Portfoilo</a>
+            <a href="index.html">Portfolio</a>
           </h2>
           <hr style="position: relative; top: 100px; border: solid 1px black" />
           <ul class="nav_mobile">
@@ -43,9 +43,22 @@
         </video>
       </div>
       <div class="container" id="section1_detail">
-        <div class="item"><h1 class="title">Portfoilo</h1></div>
+        <div class="hero-copy">
+          <p class="hero-eyebrow">Data, Design, Engineering</p>
+          <h1 class="title">Portfolio</h1>
+          <div class="hero-actions">
+            <a class="hero-button" href="#section3">View Works</a>
+            <a class="hero-button hero-button-outline" href="#section4">Contact</a>
+          </div>
+        </div>
         <div class="item v-line"></div>
-        <div class="item"><h2 class="sub-title">Exhibition of Me</h2></div>
+        <div class="item hero-summary">
+          <h2 class="sub-title">Exhibition of Me</h2>
+          <p>
+            산업공학과 데이터 분석, 웹 구현, 홍보 디자인을 연결해 문제를
+            이해하고 보기 좋은 결과물로 정리합니다.
+          </p>
+        </div>
       </div>
     </div>
     <div class="section" id="section2">
@@ -54,80 +67,90 @@
       </div>
 
       <div class="content">
+        <p class="section-kicker">About</p>
         <h2 class="name">Lee Eui Jin</h2>
-        <h3 class="list-title">Profile</h3>
-        <ul class="profile-list">
-          <li class="profile-list-text">
-            B.S in Hankuk University of Foreign Studies (HUFS)
-          </li>
-          <li class="profile-list-text">
-            Industrial Management Engineering & Computer Electronic System
-            Engineering
-          </li>
-          <li class="profile-list-text">
-            M.S in Korea University
-          </li>
-          <li class="profile-list-text">
-            한국외대 대기환경연구센터 학생연구원(2022.07.01~2024.12.31)
-          </li>
-          <li class="profile-list-text">
-            한국외대 산업경영공학과 인공지능&빅데이터 학회 학회장 (2023.03.01~ 2024.02.29)
-          </li>
-          <li class="profile-list-text">
-            한국외대 산업경영공학과 학생회 홍보부장 (2023.01.01 ~ 2023.12.31)
-          </li>
-        </ul>
-        <h3 class="list-title">Can handel</h3>
-        <ul class="profile-list">
-          <li class="profile-list-text">HTML / CSS / JavaScript</li>
-          <li class="profile-list-text">Data Analysis with Python & R</li>
-          <li class="profile-list-text">Data Access with MySql</li>
-          <li class="profile-list-text">Design using ppt and figma</li>
-        </ul>
+        <div class="profile-grid">
+          <article class="profile-card">
+            <h3 class="list-title">Profile</h3>
+            <ul class="profile-list">
+              <li class="profile-list-text">
+                B.S in Hankuk University of Foreign Studies (HUFS)
+              </li>
+              <li class="profile-list-text">
+                Industrial Management Engineering &amp; Computer Electronic System
+                Engineering
+              </li>
+              <li class="profile-list-text">M.S in Korea University</li>
+              <li class="profile-list-text">
+                한국외대 대기환경연구센터 학생연구원(2022.07.01~2024.12.31)
+              </li>
+              <li class="profile-list-text">
+                한국외대 산업경영공학과 인공지능&amp;빅데이터 학회 학회장
+                (2023.03.01~2024.02.29)
+              </li>
+              <li class="profile-list-text">
+                한국외대 산업경영공학과 학생회 홍보부장
+                (2023.01.01~2023.12.31)
+              </li>
+            </ul>
+          </article>
+          <article class="profile-card profile-card-accent">
+            <h3 class="list-title">Can Handle</h3>
+            <ul class="skill-list">
+              <li>HTML / CSS / JavaScript</li>
+              <li>Data Analysis with Python &amp; R</li>
+              <li>Data Access with MySQL</li>
+              <li>Design using PowerPoint and Figma</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </div>
     <hr />
     <div class="section" id="section3">
-      <h2 class="title-2">main content</h2>
+      <p class="section-kicker">Works</p>
+      <h2 class="title-2">Main Content</h2>
 
       <div class="container" id="container-section3">
-        <label for="promotion-page">
-          <a href="./promotion-con.html">
-            <div class="item item-section3" id="section3-text-1">
-              <p>
-                The <br />
-                Promotion <br />
-                Of the <br />Student Council
-              </p>
-            </div>
-          </a>
-        </label>
+        <a class="work-card" href="./promotion-con.html">
+          <div class="item item-section3" id="section3-text-1">
+            <span class="work-number">01</span>
+            <p>
+              The <br />
+              Promotion <br />
+              Of the <br />Student Council
+            </p>
+            <span class="work-link">Open Project</span>
+          </div>
+        </a>
 
-        <label for="project-page">
-          <a href="./project.html">
-            <div class="item item-section3" id="section3-text-2">
-              <h2>PROJECT</h2>
-            </div>
-          </a>
-        </label>
-        <label for="promotion-ac">
-          <a href="./promotion-ac.html">
-            <div class="item item-section3" id="section3-text-3">
-              <p>
-                Promotions For <br />
-                Academic Activities
-              </p>
-            </div>
-          </a>
-        </label>
+        <a class="work-card" href="./project.html">
+          <div class="item item-section3" id="section3-text-2">
+            <span class="work-number">02</span>
+            <h2>PROJECT</h2>
+            <p>Recommendation system research presentation</p>
+            <span class="work-link">Open Project</span>
+          </div>
+        </a>
+        <a class="work-card" href="./promotion-ac.html">
+          <div class="item item-section3" id="section3-text-3">
+            <span class="work-number">03</span>
+            <p>
+              Promotions For <br />
+              Academic Activities
+            </p>
+            <span class="work-link">Open Project</span>
+          </div>
+        </a>
       </div>
     </div>
     <div class="section" id="section4">
       <div class="container" id="container-section4">
         <div class="contact-box-left">
-          <p class="contact-box-left-title">Contact information</p>
+          <p class="section-kicker">Location</p>
+          <p class="contact-box-left-title">Korea University New Engineering Building</p>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25379.46088885617!2d127.2650979!3d37.33226559999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b557cb236a449%3A0xae050b2ce766e1e9!2z7ZWc6rWt7Jm46rWt7Ja064yA7ZWZ6rWQIOq4gOuhnOuyjOy6oO2NvOyKpA!5e0!3m2!1sko!2skr!4v1705212975893!5m2!1sko!2skr"
+            src="https://www.google.com/maps?q=%EA%B3%A0%EB%A0%A4%EB%8C%80%ED%95%99%EA%B5%90%20%EC%8B%A0%EA%B3%B5%ED%95%99%EA%B4%80&amp;output=embed"
             width="600"
             height="600"
             style="border: 0"
@@ -135,26 +158,37 @@
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
-          <p class="contact-box-left-text">tell : 010.5414.5762</p>
-          <p class="contact-box-left-text">emali: ej5762@naver.com</p>
+          <div class="contact-detail-list">
+            <p class="contact-box-left-text">Tel: 010.5414.5762</p>
+            <p class="contact-box-left-text">Email: ej5762@naver.com</p>
+          </div>
         </div>
         <div class="contact-box-right">
           <div class="wrapper">
             <h2 class="contact-box-right-title">Contact</h2>
             <form action="#">
               <div>
-                <label for="name">name</label>
-                <input type="text" id="name" name="your-name" />
+                <label for="name">Name</label>
+                <input type="text" id="name" name="your-name" placeholder="Your name" />
               </div>
               <div>
                 <label for="email">Email address</label>
-                <input type="email" id="email" name="your-email" />
+                <input
+                  type="email"
+                  id="email"
+                  name="your-email"
+                  placeholder="you@example.com"
+                />
               </div>
               <div>
                 <label for="message">Message</label>
-                <textarea name="your-message" id="message"></textarea>
+                <textarea
+                  name="your-message"
+                  id="message"
+                  placeholder="Tell me about your project or question."
+                ></textarea>
               </div>
-              <input type="submit" class="button" value="submit" />
+              <input type="submit" class="button" value="Submit" />
             </form>
           </div>
         </div>
