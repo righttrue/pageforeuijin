@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | EV Charging VRP</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Philosopher"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css?v=projects-20260702" />
+  </head>
+  <body class="portfolio-page">
+    <header>
+      <h1><a href="index.html">Profile</a></h1>
+      <nav>
+        <ul class="main-nav">
+          <li><a href="promotion-con.html">Student Council</a></li>
+          <li><a href="promotion-ac.html">Academy</a></li>
+          <li><a href="project.html">Project</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="project-detail-page">
+      <a class="back-link" href="project.html">Back to database</a>
+      <section class="project-detail-hero">
+        <div>
+          <p class="section-kicker">Operations Research / Reinforcement Learning</p>
+          <h1>VRP for On-site EV Charging with Split Delivery and Replenishment</h1>
+          <p>
+            전기차 충전 인프라의 한계를 이동형 충전 서비스 운영 문제로 보고,
+            고객 시간창, 차량 용량, depot 재방문, 분할 배송을 함께 고려한
+            경로계획 모델과 알고리즘을 설계했습니다.
+          </p>
+        </div>
+        <img
+          class="project-hero-image"
+          src="imges/project-ev-charging.png"
+          alt="EV charging VRP presentation cover slide"
+        />
+      </section>
+
+      <section class="project-insight-strip">
+        <div>
+          <span>Problem</span>
+          <strong>이동형 충전은 가능하지만 운영 비용이 진입 장벽이 됨</strong>
+        </div>
+        <div>
+          <span>Model</span>
+          <strong>EVRPTW-PR with depot revisit and split delivery</strong>
+        </div>
+        <div>
+          <span>Result</span>
+          <strong>대규모 인스턴스에서 RL이 tabu search 대비 더 나은 해 탐색</strong>
+        </div>
+      </section>
+
+      <section class="case-study">
+        <article>
+          <p class="section-kicker">01 Context</p>
+          <h2>왜 이 프로젝트를 시작했나</h2>
+          <p>
+            전기차 신규 등록과 판매는 빠르게 늘고 있지만, 공동주택 중심의
+            국내 환경에서는 고정형 충전기 증설이 항상 쉬운 해법이 아닙니다.
+            이동형 충전 서비스는 실제로 존재하지만 높은 운영 비용 때문에
+            사용자에게 부담이 됩니다.
+          </p>
+        </article>
+        <article>
+          <p class="section-kicker">02 Modeling</p>
+          <h2>문제를 어떻게 정식화했나</h2>
+          <p>
+            각 충전 트럭은 제한된 배터리 용량을 가지고 고객 시간창 안에서
+            서비스를 제공합니다. 고객 수요를 한 번에 모두 처리하지 못하는
+            상황을 반영하기 위해 split delivery를 허용하고, depot 재방문을 통해
+            재충전 후 다음 route를 수행하도록 구성했습니다.
+          </p>
+        </article>
+        <article>
+          <p class="section-kicker">03 Algorithm</p>
+          <h2>어떻게 해결했나</h2>
+          <p>
+            먼저 MIP로 문제 구조와 제약을 명확히 정의했습니다. 이후 feasible
+            node search 기반 초기해, relocate/exchange 중심 tabu search,
+            action masking을 적용한 PPO 기반 강화학습을 비교했습니다.
+          </p>
+        </article>
+        <article>
+          <p class="section-kicker">04 Learning</p>
+          <h2>무엇을 확인했나</h2>
+          <p>
+            작은 인스턴스에서는 split delivery와 full-charge 가정의 효과를
+            확인했고, 큰 인스턴스에서는 강화학습이 제한 시간 안에서 더 다양한
+            action을 탐색하며 tabu search보다 우수한 목적함수 값을 보였습니다.
+          </p>
+        </article>
+      </section>
+
+      <section class="method-board">
+        <div>
+          <h2>Methods</h2>
+          <ul>
+            <li>MIP formulation for routing, service quantity, and time windows</li>
+            <li>Tabu search with relocate, split-relocate, and exchange operations</li>
+            <li>Maskable PPO to avoid infeasible customer actions at each step</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Portfolio takeaway</h2>
+          <p>
+            이 프로젝트는 현실 운영 제약을 수리모형으로 번역하고, 정확한 모델과
+            빠른 휴리스틱을 함께 설계한 경험을 보여줍니다. 단순 구현보다 문제
+            구조를 읽고 해결 전략을 선택하는 역량을 드러내는 연구 프로젝트입니다.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        <small
+          >&copy; 201902743 Lee Eui Jin | Hankuk University of Foreign Studies
+          (HUFS)</small
+        >
+      </p>
+    </footer>
+  </body>
+</html>
